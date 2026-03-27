@@ -1,4 +1,4 @@
-const canciones = [
+export const canciones = [
   { id: 1, album: "Signos", title: "Prófugos", artist: "Soda Stereo", length: "4:35" },
   { id: 2, album: "Thriller", title: "Billie Jean", artist: "Michael Jackson", length: "4:54" },
   { id: 3, album: "Abbey Road", title: "Come Together", artist: "The Beatles", length: "4:19" },
