@@ -71,5 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 #Instale react-icons
 #Instale Axios
-
-#Hacemos uso de V2 API
+#React router
