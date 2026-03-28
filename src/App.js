@@ -3,8 +3,8 @@ import {FaMusic, FaCompactDisc, FaSpinner} from "react-icons/fa";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import axios from "axios";
 import Header from "./components/Header";
-import Buscador from "./components/Buscador";
-import DetalleAlbum from "./components/DetalleAlbum";
+import SearchBar from "./components/SearchBar";
+import SongDetail from "./components/SongDetail";
 import "./App.css";
 
 
@@ -20,8 +20,8 @@ function App() {
     <Router>
       <div style={{ minHeight: '100vh', backgroundColor: '#121212', color: 'white' }}>
         <Routes>
-          <Route path="/" element={<Buscador />} />
-          <Route path="/album/:id" element={<DetalleAlbum />} />
+          <Route path="/" element={<SearchBar />} />
+          <Route path="/album/:id" element={<SongDetail />} />
         </Routes>
       </div>
     </Router>
