@@ -1,6 +1,4 @@
-import React from "react";
 import logo from "../spotify_logo.webp";
-import "../App.css";
 
 const Header = () =>  {
     

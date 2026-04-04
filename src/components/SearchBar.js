@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {Link} from "react-router-dom";
 import audioApi from "./audioApi";
-import {FaSearch, FaCompactDisc} from "react-icons/fa";
+import {FaSearch} from "react-icons/fa";
 
 function SearchBar() {
     const [albumes, setAlbumes] = useState([]);
