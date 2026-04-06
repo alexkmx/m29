@@ -72,3 +72,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 #Instale react-icons
 #Instale Axios
 #React router
+# Instalar Styled-Components
+` npm install styled-components`
+

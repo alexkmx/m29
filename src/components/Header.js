@@ -1,20 +1,21 @@
 import logo from "../spotify_logo.webp";
+import {HeaderS} from "./styles";
 
 const Header = () =>  {
     
-
-    const componentDidMount = () => {
+    /*const componentDidMount = () => {
         console.log("La App se ha cargado correctamente");
         
-    }
+    }*/
      
         return (
-            <header className="header">
+            <HeaderS >
                 <img src={logo}/>
                 <p>Explorar</p>
                 <p>Cerrar sesión</p>
                 <p>Cuenta</p>
-            </header>
+                
+            </HeaderS>
         )
     
 
