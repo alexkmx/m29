@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FaPlay, FaClock, FaListOl } from 'react-icons/fa';
 import audioApi from "./audioApi";
+import { SongDetailCont, SongCont, TablaDetalles } from "./styles";
 
 function SongDetail() {
     const { id } = useParams();
@@ -30,29 +31,29 @@ function SongDetail() {
     if (!album) return <p>Cargando detalles...</p>;
 
     return (
-       <div className="song_detail_cont">
+       <SongDetailCont>
           <Link to="/" className="link">← Volver al buscador</Link>
       
-            <div className="song_cont">
+            <SongCont>
               <img 
                 src={album.strAlbumThumb} 
                 alt={album.strAlbum} 
-                style={{ width: '250px', borderRadius: '10px', boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }} 
+                /*style={{ width: '250px', borderRadius: '10px', boxShadow: '0 4px 20px rgba(0,0,0,0.5)' }} */
               />
             <div style={{ flex: 1 }}>
               <h1>{album.strAlbum}</h1>
-              <h3 style={{ color: '#b3b3b3' }}>{album.strArtist} • {album.intYearReleased}</h3>
-              <p style={{ fontSize: '0.9rem', color: '#888' }}>Género: {album.strGenre}</p>
+              <h3>{album.strArtist} • {album.intYearReleased}</h3>
+              <p>Género: {album.strGenre}</p>
             </div>
-      </div>
+      </SongCont>
 
       
-      <div style={{ marginTop: '40px' }}>
-        <h2 style={{ borderBottom: '1px solid #333', paddingBottom: '10px' }}>
+      <TablaDetalles>
+        <h2>
           <FaListOl style={{ marginRight: '10px' }} /> Lista de canciones
         </h2>
         
-        <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '10px' }}>
+        <table>
           <thead>
             <tr style={{ color: '#b3b3b3', textAlign: 'left', borderBottom: '1px solid #222' }}>
               <th style={{ padding: '10px' }}>#</th>
@@ -80,8 +81,8 @@ function SongDetail() {
             ))}
           </tbody>
         </table>
-      </div>
-    </div>
+      </TablaDetalles>
+    </SongDetailCont>
     )
 }
 
